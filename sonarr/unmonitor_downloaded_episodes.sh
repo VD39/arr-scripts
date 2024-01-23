@@ -44,7 +44,7 @@ unmonitor_episode() {
     --header "accept: */*" \
     --header "Content-Type: application/json" \
     --header "X-Api-Key: $API_KEY" \
-    --data "{ episodeIds: [$sonarr_episodefile_episodeids], monitored: false }"
+    --data "{ \"episodeIds\": [$sonarr_episodefile_episodeids], \"monitored\": false }"
   )
 
   http_status_code="${response:len-3}"
